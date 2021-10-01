@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="647.0" prefWidth="1137.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="micro.financiera_credi.mujer.FXMLCrediMujerController">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="1238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../micro.image/credimujer_img.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="buttonSimulateCredit" focusTraversable="false" layoutX="996.0" layoutY="402.0" onAction="#simulateCredit" prefHeight="37.0" prefWidth="216.0" style="-fx-background-color: #F4D481; -fx-background-radius: 10;" text="Simula tu crédito">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="imageEstablished" fitHeight="101.0" fitWidth="90.0" layoutX="53.0" layoutY="413.0" onMouseClicked="#selectImageEstablished" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imageDirectSale" fitHeight="101.0" fitWidth="90.0" layoutX="190.0" layoutY="413.0" onMouseClicked="#selectImageDirectSale" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imageSemiFixed" fitHeight="101.0" fitWidth="90.0" layoutX="53.0" layoutY="543.0" onMouseClicked="#selectImageSemiFixed" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imageMovil" fitHeight="112.0" fitWidth="98.0" layoutX="183.0" layoutY="534.0" onMouseClicked="#selectImageMovil" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imageFashionAndBeauty" fitHeight="133.0" fitWidth="98.0" layoutX="377.0" layoutY="402.0" onMouseClicked="#selectImageFashionAndBeauty" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imageGrocery" fitHeight="120.0" fitWidth="109.0" layoutX="516.0" layoutY="413.0" onMouseClicked="#selectImageGrocery" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imageFood" fitHeight="112.0" fitWidth="133.0" layoutX="358.0" layoutY="540.0" onMouseClicked="#selectImageFood" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imageCleaningProducts" fitHeight="140.0" fitWidth="133.0" layoutX="508.0" layoutY="551.0" onMouseClicked="#selectImageCleaningProducts" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <AnchorPane layoutX="705.0" layoutY="414.0" prefHeight="200.0" prefWidth="216.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <JFXRadioButton fx:id="radiotButtonFirst" focusTraversable="false" layoutX="14.0" layoutY="14.0" onAction="#selectFirstRadioButton" prefHeight="24.0" prefWidth="168.0" text="Menos de $10,000" />
+            <JFXRadioButton fx:id="radioButtonSecond" focusTraversable="false" layoutX="14.0" layoutY="58.0" onAction="#selectSecondRadioButton" prefHeight="24.0" prefWidth="200.0" text="De $10,000 a menos de $20,000" />
+            <JFXRadioButton fx:id="radioButtonThirth" focusTraversable="false" layoutX="14.0" layoutY="120.0" onAction="#selectThirthRadioButton" prefHeight="17.0" prefWidth="168.0" text="De $20,000 a $30,000" />
+            <JFXRadioButton fx:id="radioButtonFourth" focusTraversable="false" layoutX="14.0" layoutY="162.0" onAction="#selectFourthRadioButton" prefHeight="24.0" prefWidth="168.0" text="Más de $30,000" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="textFieldAmount" editable="false" focusTraversable="false" layoutX="1084.0" layoutY="528.0" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="textFieldTerm" editable="false" focusTraversable="false" layoutX="1084.0" layoutY="571.0" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="textFieldMonthlyPayment" editable="false" focusTraversable="false" layoutX="1084.0" layoutY="614.0" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="labelBusiness" layoutX="83.0" layoutY="385.0" text="*No has escogido un negocio" textFill="RED" visible="false" />
+      <Label fx:id="labelProduct" layoutX="415.0" layoutY="385.0" text="*No has escogido un producto" textFill="RED" visible="false" />
+      <Label fx:id="labelMonthlySales" layoutX="733.0" layoutY="385.0" text="*No has escogido el nivel de ventas" textFill="RED" visible="false" />
+      <AnchorPane fx:id="anchorPaneEstablish" layoutX="40.0" layoutY="402.0" opacity="0.35" prefHeight="112.0" prefWidth="117.0" style="-fx-background-color: a6eec1; -fx-background-radius: 20;" visible="false" />
+      <AnchorPane fx:id="anchorPaneDirectSale" layoutX="177.0" layoutY="408.0" opacity="0.35" prefHeight="112.0" prefWidth="117.0" style="-fx-background-color: a6eec1; -fx-background-radius: 20;" visible="false" />
+      <AnchorPane fx:id="anchorPaneSemiFixed" layoutX="40.0" layoutY="534.0" opacity="0.35" prefHeight="112.0" prefWidth="117.0" style="-fx-background-color: a6eec1; -fx-background-radius: 20;" visible="false" />
+      <AnchorPane fx:id="anchorPaneMovil" layoutX="174.0" layoutY="532.0" opacity="0.35" prefHeight="120.0" prefWidth="117.0" style="-fx-background-color: a6eec1; -fx-background-radius: 20;" visible="false" />
+      <AnchorPane fx:id="anchorPaneFashionAndBeauty" layoutX="366.0" layoutY="402.0" opacity="0.35" prefHeight="133.0" prefWidth="123.0" style="-fx-background-color: a6eec1; -fx-background-radius: 20;" visible="false" />
+      <AnchorPane fx:id="anchorPaneGrocery" layoutX="508.0" layoutY="408.0" opacity="0.35" prefHeight="127.0" prefWidth="123.0" style="-fx-background-color: a6eec1; -fx-background-radius: 20;" visible="false" />
+      <AnchorPane fx:id="anchorPaneFood" layoutX="357.0" layoutY="540.0" opacity="0.35" prefHeight="120.0" prefWidth="140.0" style="-fx-background-color: a6eec1; -fx-background-radius: 20;" visible="false" />
+      <AnchorPane fx:id="anchorPaneCleaningProducts" layoutX="497.0" layoutY="551.0" opacity="0.35" prefHeight="140.0" prefWidth="150.0" style="-fx-background-color: a6eec1; -fx-background-radius: 20;" visible="false" />
+   </children>
+</AnchorPane>
